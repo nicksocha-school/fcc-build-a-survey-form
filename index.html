@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Build a Survey Form</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Super Bowl Party RSVP</h1>
+            <p id="description" class="description text-center">
+                Ready for the big game?<br>Use this RSVP form to let us know you're coming to our <span
+                    class="bold">super</span>
+                Super Bowl party.
+            </p>
+        </header>
+        <form id="survey-form">
+            <!-- Name -->
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name..."
+                    required />
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email..."
+                    required />
+            </div>
+            <!-- Guests -->
+            <div class="form-group">
+                <p>Are you bringing Guests?</p>
+                <label><input name="guests" value="definitely" type="radio" class="input-radio" />Definitely</label>
+                <label><input name="guests" value="maybe" type="radio" class="input-radio" />Maybe</label>
+                <label><input name="guests" value="not-sure" type="radio" class="input-radio" checked />Not
+                    sure</label>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">If so, how many?<span class="clue">(optional)</span></label>
+                <input type="number" name="number-of-guests" id="number" min="1" max="99" class="form-control"
+                    placeholder="Number of Guests..." />
+            </div>
+            <!-- Winning Team -->
+            <div class="form-group">
+                <p>Who is going to be the winning team?</p>
+                <select id="dropdown" name="winning-team" class="form-control" required>
+                    <option value="team" selected value>Team...</option>
+                    <option value="49ers" disabled>San Francisco 49ers</option>
+                    <option value="bears" disabled>Chicago Bears</option>
+                    <option value="cowboys" disabled>Dallas Cowboys</option>
+                    <option value="packers">Green Bay Packers</option>
+                    <option value="patriots" disabled>New England Patriots</option>
+                    <option value="vikings" disabled>Minnesota Vikings</option>
+                </select>
+            </div>
+            <!-- Bring? -->
+            <div class="form-group">
+                <p>What will you bring?<span class="clue">(Check all that apply)</span></p>
+                <label><input name="prefer" value="appetizer" type="checkbox" class="input-checkbox" />Appetizer</label>
+                <label><input name="prefer" value="dessert" type="checkbox" class="input-checkbox" />Dessert</label>
+                <label><input name="prefer" value="drinks" type="checkbox" class="input-checkbox" />Drinks</label>
+                <label><input name="prefer" value="side" type="checkbox" class="input-checkbox" />Side</label>
+                <label><input name="prefer" value="other" type="checkbox" class="input-checkbox" />Other<input
+                        type="text" id="other-value" name="other"></label>
+            </div>
+            <!-- Score Prediction -->
+            <div class="form-group">
+                <p>What's your final score prediction?</p>
+                <textarea id="score" name="score" placeholder="Packers 72-0..."></textarea>
+            </div>
+            <!-- Comments / Suggestions -->
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+            <!-- Submit -->
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </main>
+
+
+    <script src="js/app.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>

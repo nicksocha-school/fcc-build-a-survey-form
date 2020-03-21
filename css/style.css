@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Graduate&display=swap");
+
+:root {
+  --color-gold: #efae1e;
+  --color-green: #06342d;
+  --color-lightgold: #f7d488;
+  --color-lightgreen: rgba(8, 69, 60, 0.8);
+  --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-white);
+  font-family: "Graduate", cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+body::before {
+  background: var(--color-green);
+  background-image: radial-gradient(
+      35vw,
+      rgba(239, 174, 30, 0.5),
+      rgba(6, 52, 45, 0.8)
+    ),
+    url(/images/gb-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+button {
+  border: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+p {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+label {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.clue {
+  color: #e4e4e4;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Form */
+
+.form-control {
+  background-clip: padding-box;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  color: #495057;
+  display: block;
+  height: 2.4rem;
+  padding: 0.3rem 0.7rem;
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 0.2rem rgba(239, 174, 30, 0.25);
+  outline: 0;
+}
+
+.form-group {
+  margin: 0 auto 1.2rem auto;
+  padding: 0.2rem;
+}
+
+.input-checkbox,
+.input-radio {
+  display: inline-block;
+  margin-right: 0.6rem;
+  min-height: 1.2rem;
+  min-width: 1.2rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  padding: 0.6rem;
+  resize: vertical;
+  width: 100%;
+}
+
+.submit-button {
+  background: var(--color-gold);
+  border-radius: 2px;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem;
+  transition: all 300ms;
+  width: 30vmin;
+}
+
+.submit-button:hover {
+  background: var(--color-lightgold);
+}
+
+#other-value {
+  margin: 0 0 0 10px;
+}
+
+#survey-form {
+  background: var(--color-lightgreen);
+  border-radius: 15px;
+  padding: 2.5rem 1rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    border-radius: 0.25rem;
+    padding: 2.5rem;
+  }
+}
