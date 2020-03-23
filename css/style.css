@@ -30,7 +30,7 @@ body::before {
       rgba(239, 174, 30, 0.5),
       rgba(6, 52, 45, 0.8)
     ),
-    url(/images/gb-background.jpg);
+    url(../images/gb-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
